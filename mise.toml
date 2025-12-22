@@ -1,0 +1,14 @@
+[tools]
+uv = "latest"
+
+[tasks.decode]
+description = "Decode ciphertext"
+usage = '''
+arg "<ciphertext>" help="Input ciphertext to decode"
+complete "ciphertext" run="ls *.txt"
+'''
+run = 'uv run decode.py ${usage_ciphertext?}'
+
+[settings]
+python.uv_venv_auto = true
+
