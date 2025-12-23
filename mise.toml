@@ -10,5 +10,5 @@ complete "ciphertext" run="ls *.txt"
 run = 'uv run decode.py ${usage_ciphertext?}'
 
 [settings]
-python.uv_venv_auto = true
+python.uv_venv_auto = "create|source"
 
